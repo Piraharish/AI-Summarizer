@@ -13,6 +13,12 @@ main {
   );
 }
 
+@media screen and (max-width: 640px) {
+  .main {
+    padding: 0;
+  }
+}
+
 .main {
   width: 100vw;
   min-height: 100vh;
@@ -92,38 +98,32 @@ main {
   }
 }
 
-.search{
+.search {
   position: relative;
-  background:black;
+  background: black;
   border-radius: 10px;
   padding: 2px;
   overflow: hidden;
-  justify-content:center;
-  -ms-align-items:center;
-  align-items:center;
+  justify-content: center;
+  -ms-align-items: center;
+  align-items: center;
 }
 
-.search::before{
-  content:'';
-  position:absolute;
+.search::before {
+  content: "";
+  position: absolute;
   width: 100%;
   height: 100%;
-  background:linear-gradient(#0648a2,#00ccff,#9aecb7);
-  animation:rotate 4s linear infinite;
+  background: linear-gradient(#0648a2, #00ccff, #9aecb7);
+  animation: rotate 4s linear infinite;
 }
 
-@keyframes rotate{
-  from{
-    transform:rotate(0deg)
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
   }
-  to{
-    transform:rotate(360deg)
-  }
-}
-
-@media screen and (max-width: 640px) {
-  .main {
-    padding: 0;
+  to {
+    transform: rotate(360deg);
   }
 }
 
@@ -133,20 +133,16 @@ main {
   @apply relative z-10 flex justify-center items-center flex-col max-w-7xl mx-auto sm:px-16 px-6;
 }
 
-.logo{
-  @apply w-44 h-44
-}
-
 .linkedin_btn {
-  @apply rounded-s-xl border-2 border-r-0 border-emerald-400 bg-transparent py-1.5 px-2 text-2xl text-white transition-all hover:bg-gradient-to-br from-blue-400 via-blue-600 to-blue-800 hover:border-none;
+  @apply rounded-lg border-b-4 border-transparent bg-transparent py-1.5 px-2 text-xl  font-inter tracking-wide font-bold text-gray-50 transition-all hover:rounded-b-lg hover:text-gray-800 hover:border-gray-50 hover:backdrop-blur-xl hover:backdrop-opacity-75;
 }
 
 .github_btn {
-  @apply rounded-none border-2 border-x-0 border-emerald-400 bg-transparent py-1.5 px-2 text-2xl text-white transition-all hover:bg-gradient-to-br from-transparent via-black to-transparent hover:border-none;
+  @apply rounded-lg border-b-4 border-transparent bg-transparent py-1.5 px-2 text-xl  font-inter tracking-wide font-bold text-gray-800 transition-all hover:rounded-b-lg hover:text-gray-50 hover:border-gray-900 hover:backdrop-blur-xl hover:backdrop-opacity-75;
 }
 
 .portfolio_btn {
-  @apply rounded-e-xl border-2 border-l-0 border-emerald-400 bg-transparent py-1.5 px-2 text-2xl text-white transition-all hover:bg-gradient-to-br from-indigo-700 via-violet-500 to-violet-700 hover:border-none;
+  @apply rounded-lg border-b-4 border-transparent bg-transparent py-1.5 px-2 text-xl  font-inter tracking-wide font-bold text-gray-50 transition-all hover:rounded-b-lg hover:text-gray-800 hover:border-gray-50 hover:backdrop-blur-xl hover:backdrop-opacity-75;
 }
 
 .head_text {
@@ -182,7 +178,6 @@ main {
 }
 
 .summary_box {
-  @apply rounded-xl p-4 text-justify border-2 border-t-indigo-400 border-r-teal-500 border-b-emerald-500 border-l-violet-500 text-blue-50 ;
+  @apply rounded-xl p-4 text-justify border-2 border-t-indigo-400 border-r-teal-500 border-b-emerald-500 border-l-violet-500 text-blue-50;
   backdrop-filter: blur(10px);
 }
-
