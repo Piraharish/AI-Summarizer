@@ -1,0 +1,188 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+main {
+  min-height: 100vh;
+  height: auto;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 212, 255, 1) 0%,
+    rgba(9, 9, 121, 1) 60%,
+    rgba(2, 0, 0.6, 1) 120%
+  );
+}
+
+.main {
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: col;
+  position: absolute;
+  overflow: hidden;
+}
+
+.gradient div {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background-color: transparent;
+  border: 6px solid rgba(255, 255, 255, 0.8);
+  border-radius: 15px;
+}
+.gradient div:nth-child(1) {
+  top: 12%;
+  left: 42%;
+  animation: animate 10s linear infinite;
+}
+.gradient div:nth-child(2) {
+  top: 70%;
+  left: 50%;
+  animation: animate 7s linear infinite;
+}
+.gradient div:nth-child(3) {
+  top: 17%;
+  left: 6%;
+  animation: animate 9s linear infinite;
+}
+.gradient div:nth-child(4) {
+  top: 20%;
+  left: 60%;
+  animation: animate 10s linear infinite;
+}
+.gradient div:nth-child(5) {
+  top: 67%;
+  left: 10%;
+  animation: animate 6s linear infinite;
+}
+.gradient div:nth-child(6) {
+  top: 80%;
+  left: 70%;
+  animation: animate 12s linear infinite;
+}
+.gradient div:nth-child(7) {
+  top: 60%;
+  left: 80%;
+  animation: animate 15s linear infinite;
+}
+.gradient div:nth-child(8) {
+  top: 32%;
+  left: 25%;
+  animation: animate 16s linear infinite;
+}
+.gradient div:nth-child(9) {
+  top: 90%;
+  left: 25%;
+  animation: animate 9s linear infinite;
+}
+.gradient div:nth-child(10) {
+  top: 20%;
+  left: 80%;
+  animation: animate 5s linear infinite;
+}
+
+@keyframes animate {
+  0% {
+    transform: scale(0) translateY(0) rotate(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.3) translateY(-90px) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+.search{
+  position: relative;
+  background:black;
+  border-radius: 10px;
+  padding: 2px;
+  overflow: hidden;
+  justify-content:center;
+  -ms-align-items:center;
+  align-items:center;
+}
+
+.search::before{
+  content:'';
+  position:absolute;
+  width: 100%;
+  height: 100%;
+  background:linear-gradient(#0648a2,#00ccff,#9aecb7);
+  animation:rotate 4s linear infinite;
+}
+
+@keyframes rotate{
+  from{
+    transform:rotate(0deg)
+  }
+  to{
+    transform:rotate(360deg)
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .main {
+    padding: 0;
+  }
+}
+
+/* Tailwind Styles */
+
+.app {
+  @apply relative z-10 flex justify-center items-center flex-col max-w-7xl mx-auto sm:px-16 px-6;
+}
+
+.logo{
+  @apply w-44 h-44
+}
+
+.linkedin_btn {
+  @apply rounded-s-xl border-2 border-r-0 border-emerald-400 bg-transparent py-1.5 px-2 text-2xl text-white transition-all hover:bg-gradient-to-br from-blue-400 via-blue-600 to-blue-800 hover:border-none;
+}
+
+.github_btn {
+  @apply rounded-none border-2 border-x-0 border-emerald-400 bg-transparent py-1.5 px-2 text-2xl text-white transition-all hover:bg-gradient-to-br from-transparent via-black to-transparent hover:border-none;
+}
+
+.portfolio_btn {
+  @apply rounded-e-xl border-2 border-l-0 border-emerald-400 bg-transparent py-1.5 px-2 text-2xl text-white transition-all hover:bg-gradient-to-br from-indigo-700 via-violet-500 to-violet-700 hover:border-none;
+}
+
+.head_text {
+  @apply mt-5 text-5xl font-extrabold leading-[1.15] sm:text-6xl text-center text-blue-100;
+}
+
+.gradient {
+  @apply bg-gradient-to-tr from-blue-400 via-green-200 to-green-500 bg-clip-text text-transparent;
+}
+
+.desc {
+  @apply mt-5 text-lg text-gray-300 sm:text-xl text-center max-w-2xl;
+}
+
+.url_input {
+  @apply block w-full rounded-lg border bg-white py-2.5 pl-10 pr-12 text-sm shadow-lg font-satoshi font-medium focus:outline-none focus:ring-0;
+}
+
+.submit_btn {
+  @apply absolute inset-y-0 right-0 my-1.5 mr-1.5 flex w-10 items-center justify-center rounded border border-gray-200 font-sans text-lg font-medium text-gray-400 hover:border-gray-500 hover:text-gray-500;
+}
+
+.link_card {
+  @apply p-1 flex justify-start items-center flex-row bg-white border border-gray-200 gap-3 rounded-lg cursor-pointer;
+}
+
+.copy_btn {
+  @apply w-9 h-9 rounded-full bg-white/10 shadow-[inset_10px_-50px_94px_0_rgb(199,199,199,0.2)] backdrop-blur flex justify-center items-center cursor-pointer;
+}
+
+.blue_gradient {
+  @apply font-black bg-gradient-to-r from-blue-600 to-teal-600 bg-clip-text text-transparent;
+}
+
+.summary_box {
+  @apply rounded-xl p-4 text-justify border-2 border-t-indigo-400 border-r-teal-500 border-b-emerald-500 border-l-violet-500 text-blue-50 ;
+  backdrop-filter: blur(10px);
+}
+
